@@ -1,0 +1,79 @@
+# ─────────────────────────────────────────────
+# Node / npm / Yarn
+# ─────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-store/
+.npmrc
+
+# ─────────────────────────────────────────────
+# Electron build / distribution
+# ─────────────────────────────────────────────
+dist/
+out/
+build/
+release/
+!.electron-builder.yml
+!.electron-builder.json
+!.electron-builder.config.js
+
+# ─────────────────────────────────────────────
+# Electron packaging artifacts
+# ─────────────────────────────────────────────
+*.asar
+*.asar.unpacked/
+*.exe
+*.dmg
+*.AppImage
+*.snap
+*.deb
+*.rpm
+*.pkg
+*.msi
+*.zip
+*.tar.gz
+
+# ─────────────────────────────────────────────
+# Build tools / bundlers
+# ─────────────────────────────────────────────
+.cache/
+.vite/
+.parcel-cache/
+webpack-stats.json
+coverage/
+*.tsbuildinfo
+
+# ─────────────────────────────────────────────
+# Logs and temporary files
+# ─────────────────────────────────────────────
+logs/
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────────────────────
+# IDE / Editor configs
+# ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+
+# ─────────────────────────────────────────────
+# Environment files (never commit secrets)
+# ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─────────────────────────────────────────────
+# OS-specific junk
+# ─────────────────────────────────────────────
+ehthumbs.db
+Icon?
+Desktop.ini
