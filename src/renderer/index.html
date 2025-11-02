@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>Electron App</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="/images/icon.png">
-  </head>
-  <body>
+
+</head>
+
+<body>
     <script src="index.js"></script>
 
-    <div class="app">
-        <div class="sidebar">
-            <!-- Seção do usuário -->
-            <div class="user-section">
-                <img src="https://i.pravatar.cc/150?img=3" alt="Usuário">
-                <div class="user-info">
-                    <div class="name">Reinaldo Filho</div>
-                    <div class="role">Administrador</div>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar expanded">
+            <!-- Topo com botão sanduíche -->
+            <div class="sidebar-top">
+                <button id="toggleSidebar" class="menu-button">
+                    <img src="./images/icons/menu-burger.svg" alt="Menu" />
+                </button>
+                <h1 class="sidebar-title">DevPanel</h1>
+            </div>
+
+            <!-- Campo de pesquisa -->
+            <div class="sidebar-search">
+                <input type="text" placeholder="Pesquise algo aqui..." />
+            </div>
+
+            <!-- Menu principal -->
+            <nav class="sidebar-menu">
+                <div class="menu-item active">
+                    <img src="./images/icons/home.svg" class="menu-icon" />
+                    <span class="menu-text">Dashboard</span>
+                </div>
+
+                <div class="menu-item">
+                    <img src="./images/icons/tool-box.svg" class="menu-icon" />
+                    <span class="menu-text">Ferramentas</span>
+                </div>
+
+                <div class="menu-item accordion">
+                    <div class="accordion-header">
+                        <img src="./images/icons/tools.svg" class="menu-icon" />
+                        <span class="menu-text">Configurações</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="submenu-item">Geral</div>
+                        <div class="submenu-item">Aparência</div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Rodapé fixo -->
+            <div class="sidebar-footer">
+                <div class="footer-item">
+                    <img src="./images/icons/tools.svg" class="menu-icon" />
+                    <span class="menu-text">Settings</span>
+                </div>
+                <div class="footer-user">
+                    <img src="./images/icons/user.svg" class="user-avatar" />
+                    <span class="user-name">Reinaldo</span>
+                </div>
+                <div class="footer-item logout">
+                    <img src="./images/icons/leave.svg" class="menu-icon" />
+                    <span class="menu-text">Sair</span>
                 </div>
             </div>
+        </aside>
 
-            <!-- Menu -->
-            <div class="menu">
-                <div class="menu-item active">Dashboard</div>
-                <div class="menu-item">Relatórios</div>
-                <div class="menu-item">Usuários</div>
-                <div class="menu-item">Configurações</div>
-            </div>
-            
-        </div>
-        <div class="content">
-            <h1>Conteúdo principal</h1>
-            <p>
-                Essa área cresce e se ajusta ao tamanho da tela.<br/>
-                <h1 id="message">Carregando... olá mundo cruel!</h1>
-            </p>
-        </div>
+        <!-- CONTEÚDO -->
+        <main class="content">
+            <header class="content-header">
+                <h1>Informações do Sistema</h1>
+            </header>
+
+            <section class="dashboard">
+                <div class="card">
+                    <h2>CPU</h2>
+                    <p>AMD Ryzen 5 5600G</p>
+                </div>
+                <div class="card">
+                    <h2>Memória</h2>
+                    <p>16 GB DDR4</p>
+                </div>
+                <div class="card">
+                    <h2>Armazenamento</h2>
+                    <p>SSD NVMe 512 GB</p>
+                </div>
+                <div class="card">
+                    <h2>Sistema</h2>
+                    <p>Windows 11 Pro</p>
+                </div>
+            </section>
+        </main>
     </div>
 
-  </body>
+
+</body>
+
 </html>

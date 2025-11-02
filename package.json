@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "tsc --project tsconfig.json && cpx \"src/**/*.{html,css,ttf,png,ico}\" dist",
+    "build": "tsc --project tsconfig.json && cpx \"src/**/*.{html,css,ttf,png,ico,svg}\" dist",
     "dev": "npm run build && electron .",
     "dist": "npm run build && electron-builder"
   },

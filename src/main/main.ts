@@ -27,7 +27,7 @@ const createWindow = () => {
     mainWindow.setMenu(null);
 
     //Abre as ferramentas de desenvolvedor automaticamente
-    //mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 
     // Mostra a janela apenas quando estiver pronta (melhor UX)
     mainWindow.once("ready-to-show", () => {
